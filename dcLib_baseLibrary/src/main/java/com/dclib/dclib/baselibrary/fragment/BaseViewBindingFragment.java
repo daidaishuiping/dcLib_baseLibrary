@@ -33,8 +33,8 @@ public abstract class BaseViewBindingFragment<T extends ViewBinding> extends Bas
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView();
-        initClick();
         initData();
+        initClick();
     }
 
     /**
@@ -58,14 +58,14 @@ public abstract class BaseViewBindingFragment<T extends ViewBinding> extends Bas
     public abstract void initView();
 
     /**
+     * 初始化数据
+     */
+    public abstract void initData();
+
+    /**
      * 初始化事件
      */
     public abstract void initClick();
-
-    /**
-     * 初始化界面
-     */
-    public abstract void initData();
 
     @Override
     public void onDestroyView() {

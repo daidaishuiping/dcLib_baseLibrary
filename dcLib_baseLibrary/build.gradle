@@ -51,9 +51,9 @@ dependencies {
     androidTestImplementation libs.espresso.core
 
     //AndroidUtilCode工具 https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
-    api libs.utilcodex
+    implementation libs.utilcodex
     //gson
-    api libs.gson
+    implementation libs.gson
 
-    api project(":dcLib_glide")
+    implementation project(":dcLib_glide")
 }
