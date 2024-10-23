@@ -1,0 +1,59 @@
+plugins {
+    alias(libs.plugins.androidLibrary)
+    id 'maven-publish'   //添加maven publish插件
+}
+
+android {
+    namespace 'com.dclib.dclib.baselibrary'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.android.dcLibs' //组织或公司标识符
+                artifactId = 'dcLib_baseLibrary'  //具体的库名称
+                version = '1.0.0'
+                artifact(bundleReleaseAar)
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    //AndroidUtilCode工具 https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+    api libs.utilcodex
+    //gson
+    api libs.gson
+
+    api project(":dcLib_glide")
+}
