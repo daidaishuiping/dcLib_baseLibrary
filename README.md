@@ -1,5 +1,4 @@
 # dcLib_baseLibrary 
-# 本地编译生成.aar： ./gradlew install 
 # 本地编译生成.aar： ./gradlew build 
 # 生成的.aar 文件通常会在 library/build/outputs/aar/ 目录下。
 # 本地编译：./gradlew publishToMavenLocal

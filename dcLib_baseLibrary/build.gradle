@@ -34,10 +34,32 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.android.dcLibs' //组织或公司标识符
+                groupId = 'com.android.daidaishuiping' //组织或公司标识符
                 artifactId = 'dcLib_baseLibrary'  //具体的库名称
                 version = '1.0.0'
                 artifact(bundleReleaseAar)
+
+                pom.withXml {
+                    def dependenciesNode = asNode().appendNode('dependencies')
+                    configurations.implementation.allDependencies.withType(ModuleDependency) { ModuleDependency dp -> if (dp.version != "unspecified") { // 过滤项目内library引用
+                        if("com.blankj" == dp.group){
+                            def dependencyNode = dependenciesNode.appendNode('dependency')
+                            dependencyNode.appendNode('groupId', dp.group)
+                            dependencyNode.appendNode('artifactId', dp.name)
+                            dependencyNode.appendNode('version', dp.version)
+                            // for exclusions
+                            if (dp.excludeRules.size() > 0) {
+                                def exclusions = dependencyNode.appendNode('exclusions')
+                                dp.excludeRules.each { ExcludeRule ex ->
+                                    def exclusion = exclusions.appendNode('exclusion')
+                                    exclusion.appendNode('groupId', ex.group)
+                                    exclusion.appendNode('artifactId', ex.module)
+                                }
+                            }
+                        }
+                    }
+                    }
+                }
             }
         }
     }
