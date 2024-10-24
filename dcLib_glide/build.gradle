@@ -30,7 +30,7 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.android.dcLibs' //组织或公司标识符
+                groupId = 'com.github.daidaishuiping' //组织或公司标识符
                 artifactId = 'dcLib_glide'  //具体的库名称
                 version = '1.0.0'
                 artifact(bundleReleaseAar)
@@ -41,7 +41,9 @@ afterEvaluate {
 
 dependencies {
     //图片下载缓存
-    implementation libs.glide
+    implementation(libs.glide) {
+        transitive = true
+    }
     annotationProcessor libs.glideCompiler
     implementation libs.okhttp3Integration
 }
