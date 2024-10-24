@@ -57,7 +57,9 @@ afterEvaluate {
                                         exclusion.appendNode('artifactId', ex.module)
                                     }
                                 }
-                            } else if ("com.google.code.gson" == dp.group) {
+                            }
+
+                            if ("com.google.code.gson" == dp.group) {
                                 def dependencyNode = dependenciesNode.appendNode('dependency')
                                 dependencyNode.appendNode('groupId', dp.group)
                                 dependencyNode.appendNode('artifactId', dp.name)
