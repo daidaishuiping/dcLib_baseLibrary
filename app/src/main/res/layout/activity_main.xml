@@ -6,8 +6,14 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btn"
         style="@style/button_base"
         android:background="@color/black"
         android:text="测试" />
 
+    <Button
+        android:id="@+id/btn2"
+        style="@style/button_base"
+        android:background="@color/black"
+        android:text="测试2" />
 </LinearLayout>
