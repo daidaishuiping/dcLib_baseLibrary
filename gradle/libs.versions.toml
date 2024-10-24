@@ -13,9 +13,6 @@ gson = "2.10.1"
 eventbus = "3.1.1"
 circleimageview = "3.1.0"
 roundedimageview = "2.3.0"
-simpleRatingBar = "1.5.1"
-expandableTextView = "v1.6.1"
-marqueeView = "1.4.1"
 
 glide = "4.15.1"
 glideCompiler = "4.12.0"
@@ -35,9 +32,6 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 eventbus = { group = "org.greenrobot", name = "eventbus", version.ref = "eventbus" }
 circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleimageview" }
 roundedimageview = { group = "com.makeramen", name = "roundedimageview", version.ref = "roundedimageview" }
-simpleRatingBar = { group = "com.github.ome450901", name = "SimpleRatingBar", version.ref = "simpleRatingBar" }
-expandableTextView = { group = "com.github.MZCretin", name = "ExpandableTextView", version.ref = "expandableTextView" }
-marqueeView = { group = "com.sunfusheng", name = "MarqueeView", version.ref = "marqueeView" }
 
 
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }

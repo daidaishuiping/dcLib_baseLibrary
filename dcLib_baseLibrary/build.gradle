@@ -43,119 +43,7 @@ afterEvaluate {
                     def dependenciesNode = asNode().appendNode('dependencies')
                     configurations.implementation.allDependencies.withType(ModuleDependency) { ModuleDependency dp ->
                         if (dp.version != "unspecified") { // 过滤项目内library引用
-                            if ("com.blankj" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("com.google.code.gson" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("org.greenrobot" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("de.hdodenhof" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("com.makeramen" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("com.github.ome450901" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("com.github.MZCretin" == dp.group) {
-                                def dependencyNode = dependenciesNode.appendNode('dependency')
-                                dependencyNode.appendNode('groupId', dp.group)
-                                dependencyNode.appendNode('artifactId', dp.name)
-                                dependencyNode.appendNode('version', dp.version)
-                                // for exclusions
-                                if (dp.excludeRules.size() > 0) {
-                                    def exclusions = dependencyNode.appendNode('exclusions')
-                                    dp.excludeRules.each { ExcludeRule ex ->
-                                        def exclusion = exclusions.appendNode('exclusion')
-                                        exclusion.appendNode('groupId', ex.group)
-                                        exclusion.appendNode('artifactId', ex.module)
-                                    }
-                                }
-                            }
-
-                            if ("com.sunfusheng" == dp.group) {
+                            if ("com.android.daidaishuiping" != dp.group) {
                                 def dependencyNode = dependenciesNode.appendNode('dependency')
                                 dependencyNode.appendNode('groupId', dp.group)
                                 dependencyNode.appendNode('artifactId', dp.name)
@@ -196,12 +84,6 @@ dependencies {
     implementation libs.circleimageview
     //圆角图片
     implementation libs.roundedimageview
-    //五角星评价
-    implementation libs.simpleRatingBar
-    //折叠文本
-    implementation libs.expandableTextView
-    //跑马灯
-    implementation libs.marqueeView
 
     implementation project(":dcLib_glide")
 }
