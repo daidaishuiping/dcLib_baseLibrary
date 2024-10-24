@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题栏高度-->
+    <dimen name="height_header_bar">44dp</dimen>
+    <!--UtilityView高度-->
+    <dimen name="height_utility_view">49dp</dimen>
+
+    <!--.........................间距.........................-->
+    <!--超大间距-->
+    <dimen name="space_super_big">70dp</dimen>
+    <!--大间距-->
+    <dimen name="space_big">30dp</dimen>
+    <!--中等间距-->
+    <dimen name="space_middle">22dp</dimen>
+    <!--默认间距-->
+    <dimen name="space_default">15dp</dimen>
+    <!--小间距-->
+    <dimen name="space_small">10dp</dimen>
+    <!--最小间距-->
+    <dimen name="space_small_best">4dp</dimen>
+
+    <!--.........................字体.........................-->
+    <!--标题字体大小-->
+    <dimen name="title_default">20sp</dimen>
+
+    <!--内容字体大小-->
+    <dimen name="text_font_bigger">20sp</dimen>
+    <dimen name="text_font_big">18sp</dimen>
+    <dimen name="text_font_default">14sp</dimen>
+    <dimen name="text_font_small">12sp</dimen>
+    <dimen name="text_font_smaller">10sp</dimen>
+
+    <!--标准按钮字体大小-->
+    <dimen name="font_btn">16sp</dimen>
+    <!--小号按钮字体大小-->
+    <dimen name="font_btn_small">14sp</dimen>
+    <!--最小号按钮字体大小-->
+    <dimen name="font_btn_small_best">12sp</dimen>
+
+    <!--小图片的高宽-->
+    <dimen name="height_image_small">16dp</dimen>
+    <!--中等图片的高宽-->
+    <dimen name="height_image_middle">20dp</dimen>
+    <!--图标类型的大图片高宽-->
+    <dimen name="height_image_user">40dp</dimen>
+    <!--图标类型的大图片高宽-->
+    <dimen name="height_image_icon">50dp</dimen>
+    <!--图标类型的大图片高宽-->
+    <dimen name="height_image_big">60dp</dimen>
+    <!--图标类型的超大图片高宽-->
+    <dimen name="height_image_super_big">100dp</dimen>
+
+    <!--.........................按钮.........................-->
+    <!--大按钮高度-->
+    <dimen name="button_big_height">44dp</dimen>
+    <!--大按钮圆角-->
+    <dimen name="button_big_radius">22dp</dimen>
+    <!--小按钮高度-->
+    <dimen name="height_btn_small">40dp</dimen>
+
+    <!--.........................其他.........................-->
+    <!--倒角半径大小-->
+    <dimen name="size_angle_radius">5dp</dimen>
+    <!--右箭头的大小-->
+    <dimen name="height_right_arrow">14dp</dimen>
+
+    <!--选项图标大小-->
+    <dimen name="icon_select_item_size">18dp</dimen>
+
+    <!--统一的线的高度-->
+    <dimen name="base_line_height">0.5dp</dimen>
+
+
+</resources>
