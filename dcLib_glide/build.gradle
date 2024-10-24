@@ -24,17 +24,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-
-    publishing {
-        singleVariant("release")
-    }
 }
 
 afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
                 groupId = 'com.android.dcLibs' //组织或公司标识符
                 artifactId = 'dcLib_glide'  //具体的库名称
                 version = '1.0.0'
@@ -46,7 +41,7 @@ afterEvaluate {
 
 dependencies {
     //图片下载缓存
-    api libs.glide
-    api libs.glideCompiler
-    api libs.okhttp3Integration
+    implementation libs.glide
+    annotationProcessor libs.glideCompiler
+    implementation libs.okhttp3Integration
 }
