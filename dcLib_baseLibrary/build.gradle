@@ -58,23 +58,6 @@ afterEvaluate {
                                     }
                                 }
                             }
-
-//                            if ("com.google.code.gson" == dp.group) {
-//                                def dependencyNode = dependenciesNode.appendNode('dependency')
-//                                dependencyNode.appendNode('groupId', dp.group)
-//                                dependencyNode.appendNode('artifactId', dp.name)
-//                                dependencyNode.appendNode('version', dp.version)
-//                                // for exclusions
-//                                if (dp.excludeRules.size() > 0) {
-//                                    def exclusions = dependencyNode.appendNode('exclusions')
-//                                    dp.excludeRules.each { ExcludeRule ex ->
-//                                        def exclusion = exclusions.appendNode('exclusion')
-//                                        exclusion.appendNode('groupId', ex.group)
-//                                        exclusion.appendNode('artifactId', ex.module)
-//                                    }
-//                                }
-//                            }
-//
                         }
                     }
                 }
@@ -94,10 +77,18 @@ dependencies {
     implementation libs.utilcodex
     //gson
     implementation libs.gson
+    //EventBus
+    api libs.eventbus
     //圆形图片
     implementation libs.circleimageview
     //圆角图片
     implementation libs.roundedimageview
+    //五角星评价
+    implementation libs.simpleRatingBar
+    //折叠文本
+    implementation libs.expandableTextView
+    //跑马灯
+    implementation libs.marqueeView
 
     implementation project(":dcLib_glide")
 }
