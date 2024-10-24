@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--HeaderBar自定义属性-->
+    <declare-styleable name="HeaderBar">
+        <attr name="backgroundColor" format="color" />
+        <attr name="isShowBack" format="boolean" />
+        <attr name="leftImageRes" format="reference" />
+        <attr name="titleText" format="string" />
+        <attr name="titleColor" format="color" />
+        <attr name="rightText" format="string" />
+        <attr name="leftText" format="string" />
+        <attr name="rightColor" format="color" />
+        <attr name="leftColor" format="color" />
+        <attr name="rightImageRes" format="reference" />
+        <attr name="rightTextSize" format="dimension" />
+    </declare-styleable>
+
+    <!--自定义多功能通用的view-->
+    <declare-styleable name="UtilityView">
+        <!--横线上面显示信息的间距-->
+        <attr name="info_padding_left" format="dimension" />
+        <attr name="info_padding_top" format="dimension" />
+        <attr name="info_padding_right" format="dimension" />
+        <attr name="info_padding_bottom" format="dimension" />
+
+        <!--文本是否可选择-->
+        <attr name="text_is_selectable" format="boolean" />
+
+        <!--标题属性-->
+        <attr name="text_title" format="string" />
+        <attr name="text_title_color" format="color" />
+        <attr name="text_title_size" format="integer" />
+        <attr name="text_title_is_bold" format="boolean" />
+        <attr name="text_title_visible" format="boolean" />
+        <attr name="text_title_width" format="dimension" />
+        <attr name="title_padding_left" format="dimension" />
+        <attr name="title_padding_top" format="dimension" />
+        <attr name="title_padding_right" format="dimension" />
+        <attr name="title_padding_bottom" format="dimension" />
+
+        <!--内容属性-->
+        <attr name="text_content_visible" format="boolean" />
+        <attr name="text_content_hint" format="string" />
+        <attr name="text_content" format="string" />
+        <attr name="text_content_color" format="color" />
+        <attr name="text_content_hint_color" format="color" />
+        <attr name="text_content_size" format="dimension" />
+        <attr name="text_content_input_type">
+            <enum name="TEXT" value="0" /><!--任意文本-->
+            <enum name="NUMBER" value="1" /><!--纯数字-->
+            <enum name="NUMBER_DECIMAL" value="2" /><!--小数-->
+            <enum name="PHONE" value="3" /><!--电话-->
+            <enum name="PASSWORD" value="4" /><!--密码-->
+        </attr>
+        <attr name="text_content_suffix" format="string" />
+        <attr name="text_content_input_max_length" format="integer" />
+        <attr name="text_content_input_single" format="boolean" />
+        <attr name="text_content_input_cursor_drawable" format="reference" />
+
+        <!--内容位置，value的值和Gravity的常量值对应-->
+        <attr name="content_gravity">
+            <flag name="start" value="8388611" />
+            <flag name="end" value="8388613" />
+            <flag name="top" value="48" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+        </attr>
+
+        <!--内容图片资源文件-->
+        <attr name="content_image_res" format="reference" />
+        <!--内容图片宽-->
+        <attr name="content_image_width" format="dimension" />
+        <!--内容图片高-->
+        <attr name="content_image_height" format="dimension" />
+
+        <!--右侧显示图片资源文件-->
+        <attr name="right_image_res" format="reference" />
+        <!--右侧图片宽-->
+        <attr name="right_image_width" format="dimension" />
+        <!--右侧图片高-->
+        <attr name="right_image_height" format="dimension" />
+        <!--右侧图片内边距-->
+        <attr name="right_image_padding" format="dimension" />
+        <!--是否根据输入框文本显示右侧按钮，例如右侧删除-->
+        <attr name="right_image_show_by_input" format="boolean" />
+
+        <!--数据是否为空标志-->
+        <attr name="data_not_empty" format="boolean" />
+        <!--下划线是否显示-->
+        <attr name="line_show" format="boolean" />
+        <!--下划线选中后的颜色-->
+        <attr name="line_color_checked" format="color" />
+        <!--下划线未选中或默认的颜色-->
+        <attr name="line_color" format="color" />
+
+        <!--内容控件类型，选择/输入-->
+        <attr name="type">
+            <!--选择-->
+            <enum name="CHOICE" value="0" />
+            <!--输入-->
+            <enum name="INPUT" value="1" />
+            <!--图片-->
+            <enum name="IMAGE" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="MyCodeImageView">
+        <attr name="bigimage" format="reference" />
+        <!--大图片-->
+        <attr name="smallimage" format="reference" />
+        <!--小图片-->
+        <attr name="redDotimage" format="reference" />
+        <!--小红点-->
+        <attr name="angle" format="float" />
+        <!--标识角度-->
+        <attr name="radiusSmall" format="integer" />
+        <!--小图半径-->
+        <attr name="radiusRedDot" format="integer" />
+        <!--红点半径-->
+        <attr name="border_color" format="color|reference" />
+        <!--边框颜色-->
+        <attr name="border_width" format="integer" />
+        <!--边框宽度-->
+        <attr name="border_small_color" format="color|reference" />
+        <!--边框颜色-->
+        <attr name="border_small_width" format="integer" />
+        <!--边框宽度-->
+        <attr name="hint_smallimageview" format="boolean" />
+        <!--是否隐藏小图片-->
+        <attr name="hint_RedDotimageview" format="boolean" />
+        <!--是否隐藏红点-->
+    </declare-styleable>
+
+
+    <!--圆角的textview-->
+    <declare-styleable name="ShapeTextView">
+        <attr name="gravity_s" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+        <attr name="isAutoRadius" format="boolean" />
+
+
+        <attr name="shapeType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="solidColor" format="color" />
+
+        <attr name="selectorPressedColor" format="color" />
+        <attr name="selectorDisableColor" format="color" />
+        <attr name="selectorNormalColor" format="color" />
+
+        <attr name="cornersRadius" format="dimension" />
+
+        <attr name="cornersTopLeftRadius" format="dimension" />
+        <attr name="cornersTopRightRadius" format="dimension" />
+        <attr name="cornersBottomLeftRadius" format="dimension" />
+        <attr name="cornersBottomRightRadius" format="dimension" />
+
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeDashWidth" format="dimension" />
+        <attr name="strokeDashGap" format="dimension" />
+        <attr name="strokeColor" format="color" />
+
+        <attr name="sizeWidth_s" format="dimension" />
+        <attr name="sizeHeight_s" format="dimension" />
+
+        <attr name="gradientAngle" format="float" />
+        <attr name="gradientCenterX" format="dimension" />
+        <attr name="gradientCenterY" format="dimension" />
+        <attr name="gradientGradientRadius" format="dimension" />
+        <attr name="gradientStartColor" format="color" />
+        <attr name="gradientCenterColor" format="color" />
+        <attr name="gradientEndColor" format="color" />
+        <attr name="gradientUseLevel" format="boolean" />
+
+        <attr name="useSelector" format="boolean" />
+
+        <attr name="gradientType" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+    <!--圆角的LinearLayout-->
+    <declare-styleable name="ShapeLinearLayout">
+        <attr name="shapeType_l" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="solidColor_l" format="color" />
+
+        <attr name="selectorPressedColor_l" format="color" />
+        <attr name="selectorDisableColor_l" format="color" />
+        <attr name="selectorNormalColor_l" format="color" />
+
+        <attr name="cornersRadius_l" format="dimension" />
+
+        <attr name="cornersTopLeftRadius_l" format="dimension" />
+        <attr name="cornersTopRightRadius_l" format="dimension" />
+        <attr name="cornersBottomLeftRadius_l" format="dimension" />
+        <attr name="cornersBottomRightRadius_l" format="dimension" />
+
+        <attr name="strokeWidth_l" format="dimension" />
+        <attr name="strokeDashWidth_l" format="dimension" />
+        <attr name="strokeDashGap_l" format="dimension" />
+        <attr name="strokeColor_l" format="color" />
+
+        <attr name="sizeWidth_s_l" format="dimension" />
+        <attr name="sizeHeight_s_l" format="dimension" />
+
+        <attr name="gradientAngle_l" format="float" />
+        <attr name="gradientCenterX_l" format="dimension" />
+        <attr name="gradientCenterY_l" format="dimension" />
+        <attr name="gradientGradientRadius_l" format="dimension" />
+        <attr name="gradientStartColor_l" format="color" />
+        <attr name="gradientCenterColor_l" format="color" />
+        <attr name="gradientEndColor_l" format="color" />
+        <attr name="gradientUseLevel_l" format="boolean" />
+
+        <attr name="useSelector_l" format="boolean" />
+
+        <attr name="gradientType_l" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+
+    <!--圆角的RelativeLayout-->
+    <declare-styleable name="ShapeRelativeLayout">
+        <attr name="shapeType_r" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="solidColor_r" format="color" />
+
+        <attr name="selectorPressedColor_r" format="color" />
+        <attr name="selectorDisableColor_r" format="color" />
+        <attr name="selectorNormalColor_r" format="color" />
+
+        <attr name="cornersRadius_r" format="dimension" />
+
+        <attr name="cornersTopLeftRadius_r" format="dimension" />
+        <attr name="cornersTopRightRadius_r" format="dimension" />
+        <attr name="cornersBottomLeftRadius_r" format="dimension" />
+        <attr name="cornersBottomRightRadius_r" format="dimension" />
+
+        <attr name="strokeWidth_r" format="dimension" />
+        <attr name="strokeDashWidth_r" format="dimension" />
+        <attr name="strokeDashGap_r" format="dimension" />
+        <attr name="strokeColor_r" format="color" />
+
+        <attr name="sizeWidth_s_r" format="dimension" />
+        <attr name="sizeHeight_s_r" format="dimension" />
+
+        <attr name="gradientAngle_r" format="float" />
+        <attr name="gradientCenterX_r" format="dimension" />
+        <attr name="gradientCenterY_r" format="dimension" />
+        <attr name="gradientGradientRadius_r" format="dimension" />
+        <attr name="gradientStartColor_r" format="color" />
+        <attr name="gradientCenterColor_r" format="color" />
+        <attr name="gradientEndColor_r" format="color" />
+        <attr name="gradientUseLevel_r" format="boolean" />
+
+        <attr name="useSelector_r" format="boolean" />
+
+        <attr name="gradientType_r" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+
+    <!--圆角的imageview-->
+    <declare-styleable name="CustomRoundAngleImageView">
+        <attr name="radius" format="dimension" />
+
+        <attr name="types">
+            <enum name="all" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <!--验证码的属性-->
+    <declare-styleable name="VerCodeEditText">
+        <attr name="figures" format="integer" />
+        <attr name="verCodeMargin" format="dimension" />
+        <attr name="bottomLineSelectedColor" format="reference" />
+        <attr name="bottomLineNormalColor" format="reference" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="selectedBackgroundColor" format="reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+    </declare-styleable>
+
+    <!-- 垂直方向的虚线 -->
+    <declare-styleable name="DividerView">
+        <!-- 虚线颜色 -->
+        <attr name="divider_line_color" format="color" />
+        <!-- 虚线宽度 -->
+        <attr name="dashThickness" format="dimension" />
+        <!-- 虚线dash宽度 -->
+        <attr name="dashLength" format="dimension" />
+        <!-- 虚线dash间隔 -->
+        <attr name="dashGap" format="dimension" />
+        <!-- 虚线朝向 -->
+        <attr name="divider_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

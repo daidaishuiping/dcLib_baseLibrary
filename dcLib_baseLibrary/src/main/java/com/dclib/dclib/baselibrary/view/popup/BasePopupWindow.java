@@ -42,7 +42,9 @@ public abstract class BasePopupWindow extends PopupWindow {
         //设置SelectPicPopupWindow弹出窗体的背景
         this.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        initViewAndData();
+        initView();
+        initData();
+        initClick();
     }
 
     /**
@@ -53,10 +55,19 @@ public abstract class BasePopupWindow extends PopupWindow {
     public abstract int contentViewResId();
 
     /**
-     * 初始化视图和数据
+     * 初始化界面
      */
-    public abstract void initViewAndData();
+    public abstract void initView();
 
+    /**
+     * 初始化数据
+     */
+    public abstract void initData();
+
+    /**
+     * 初始化事件
+     */
+    public abstract void initClick();
     /**
      * 底部显示
      */

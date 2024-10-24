@@ -8,6 +8,13 @@
         <item name="android:fitsSystemWindows">true</item>
     </style>
 
+    <!--header_bar-->
+    <style name="header_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_header_bar</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
     <!--直线-->
     <style name="view_line">
         <item name="android:layout_width">match_parent</item>
