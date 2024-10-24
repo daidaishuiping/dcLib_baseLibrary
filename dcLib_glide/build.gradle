@@ -34,6 +34,28 @@ afterEvaluate {
                 artifactId = 'dcLib_glide'  //具体的库名称
                 version = '1.0.0'
                 artifact(bundleReleaseAar)
+
+                pom.withXml {
+                    def dependenciesNode = asNode().appendNode('dependencies')
+                    configurations.implementation.allDependencies.withType(ModuleDependency) { ModuleDependency dp -> if (dp.version != "unspecified") { // 过滤项目内library引用
+                        if("com.github.bumptech.glide" == dp.group){
+                            def dependencyNode = dependenciesNode.appendNode('dependency')
+                            dependencyNode.appendNode('groupId', dp.group)
+                            dependencyNode.appendNode('artifactId', dp.name)
+                            dependencyNode.appendNode('version', dp.version)
+                            // for exclusions
+                            if (dp.excludeRules.size() > 0) {
+                                def exclusions = dependencyNode.appendNode('exclusions')
+                                dp.excludeRules.each { ExcludeRule ex ->
+                                    def exclusion = exclusions.appendNode('exclusion')
+                                    exclusion.appendNode('groupId', ex.group)
+                                    exclusion.appendNode('artifactId', ex.module)
+                                }
+                            }
+                        }
+                    }
+                    }
+                }
             }
         }
     }
@@ -41,9 +63,7 @@ afterEvaluate {
 
 dependencies {
     //图片下载缓存
-    implementation(libs.glide) {
-        transitive = true
-    }
+    implementation libs.glide
     annotationProcessor libs.glideCompiler
     implementation libs.okhttp3Integration
 }
