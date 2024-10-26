@@ -7,7 +7,7 @@ import com.blankj.utilcode.BuildConfig;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.Utils;
 import com.dclib.dclib.baselibrary.util.CrashHandler;
-import com.dclib.glide.GlideManager;
+import com.dclib.library.GlideManager;
 
 /**
  * 自定义Application的基类

@@ -76,14 +76,16 @@ dependencies {
 
     //AndroidUtilCode工具 https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
     implementation libs.utilcodex
-    //gson
+    //gson https://github.com/google/gson
     implementation libs.gson
-    //EventBus
+    //EventBus https://github.com/greenrobot/EventBus
     api libs.eventbus
-    //圆形图片
+    //ShapeView https://github.com/getActivity/ShapeView
+    implementation libs.shapeView
+    //圆形图片 https://github.com/hdodenhof/CircleImageView
     implementation libs.circleimageview
-    //圆角图片
+    //圆角图片 https://github.com/vinc3m1/RoundedImageView
     implementation libs.roundedimageview
-
-    implementation project(":dcLib_glide")
+    //glide https://github.com/daidaishuiping/dcLib_glide
+    implementation libs.dcLibGlide
 }
