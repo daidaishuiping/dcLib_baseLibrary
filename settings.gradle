@@ -16,10 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 
 rootProject.name = "dcLib_baseLibrary"
-//include ':app'
-include ':dcLib_baseLibrary'
-include ':dcLib_glide'
+include ':library'
